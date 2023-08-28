@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Code³OS</title>
+	<link rel="shortcut icon" href="./IMAGES/boot.png" type="image/x-icon">
+
+	<meta charset="utf-8">
+
+	<!-- <!==STYLESHEET==============================> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<!-- <!==STYLESHEET==============================> -->
+
+
+
+	<!-- <!==JS==============================> -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="tbartime.js"></script>
+	<!-- <!==JS==============================> -->
+
+
+</head>
+
+<body>
+
+
+
+	<!-- DESKTOP ICONS -->
+	<div class="Icons_holder">
+
+
+		<div class="Icons_holder">
+
+			<button onclick="OCBROWSER()" id="browserbtn" class="Iconshell" data-toggle="tooltip"
+				data-placement="bottom" title="Browser">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Browser.png"></img></center>
+			</button>
+
+			<button onclick="OCCALC()" id="browserbtn" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Calculator">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Calculator.png"></img></center>
+			</button>
+
+			<button onclick="OCCE()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Code Editor">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Code_Editor.png"></img></center>
+			</button>
+
+			<button onclick="OChtml()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="HTML Canvas">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/html.png"></img></center>
+			</button>
+
+			<button onclick="OCGAME()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Minesweeper">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/minesweeper.png"></img></center>
+			</button>
+
+			<button onclick="OCCHATGPT()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="ChatGPT">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/ChatGPT.png"></img></center>
+			</button>
+
+			<button onclick="OCMUSIC()" class="Iconshell" data-toggle="tooltip" data-placement="bottom" title="Piano">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/piano.png"></img></center>
+			</button>
+
+			<button onclick="OCNOTEPAD()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Notepad">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Notepad.png"></img></center>
+			</button>
+
+			<button onclick="OCscicalc()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Scientific-Calculator">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/calc.png"></img></center>
+			</button>
+
+			<button onclick="OCimageeditor()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Image Editor">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/imageeditor.png"></img></center>
+			</button>
+
+			<button onclick="OCtodo()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Todo List">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/todo.png"></img></center>
+			</button>
+
+			<button onclick="OCTER()" class="Iconshell" data-toggle="tooltip" data-placement="bottom" title="Terminal">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="Icons\Terminal.png"></img></center>
+			</button>
+
+			<button onclick="OCvanishchat()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Vanish Chat">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/greeenchat.png"></img></center>
+			</button>
+
+			<button onclick="OCstickynotes()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Stickynotes">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/notes.png"></img></center>
+			</button>
+
+			<button onclick="OCsupport()" class="Iconshell" data-toggle="tooltip" data-placement="bottom"
+				title="Support">
+				<center><img class="IconofIholder" style="padding: 5px 5px 5px 5px; margin: auto; "
+						src="./Icons/support.png"></img></center>
+			</button>
+
+		</div>
+
+
+
+	</div>
+	<!-- DESKTOP ICONS -->
+
+
+
+
+	<a class="weatherwidget-io" href="https://forecast7.com/en/20d5978d96/india/" data-label_1="INDIA"
+		data-label_2="WEATHER" data-theme="original">INDIA WEATHER</a>
+	<script>
+		!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+	</script>
+
+
+
+
+	<!--BROWSER OF Code³OS-->
+	<div id="browser" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Microsoft Binge</button>
+			</div>
+		</div>
+		<iframe src="https://www.bing.com/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--BROWSER OF Code³OS-->
+
+	<!--CALCULATOR OF Code³OS-->
+	<div id="calcu" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Calculator</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/calculator/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--CALCULATOR OF Code³OS-->
+
+	<!--CODEEDITOR OF Code³OS-->
+	<div id="codeeditor" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Code Editor</button>
+			</div>
+		</div>
+		<iframe src="https://editly.netlify.app/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--CODEEDITOR OF Code³OS-->
+
+	<!--HTML Canvas OF Code³OS-->
+	<div id="htmlwin" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>HTML Canvas</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/html-canvas/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--HTML Canvas OF Code³OS-->
+
+	<!--GAME OF Code³OS-->
+	<div id="game" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Minesweeper</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/minesweeper/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--GAME OF Code³OS-->
+
+	<!--ChatGPT OF Code³OS-->
+	<div id="CHATGPT" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>ChatGPT</button>
+			</div>
+		</div>
+		<iframe src="https://chat.openai.com/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--ChatGPT OF Code³OS-->
+
+	<!--MUSIC OF Code³OS-->
+	<div id="music" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Piano</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/piano" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--MUSIC OF Code³OS-->
+
+	<!--NOTEPAD OF Code³OS-->
+	<div id="notepad" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Notepad</button>
+			</div>
+		</div>
+		<iframe src="https://r3dhulk-productions.github.io/web-notepad/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--NOTEPAD OF Code³OS-->
+
+	<!--scicalc OF Code³OS-->
+	<div id="scicalc" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Scientific-Calculator</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/scientific-calculator/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--scicalc OF Code³OS-->
+
+	<!--imageeditor OF Code³OS-->
+	<div id="imageeditor" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Photo Editor</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/imageeditor/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--imageeditor OF Code³OS-->
+
+	<!--todo OF Code³OS-->
+	<div id="todo" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Todo List</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/todo/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--todo OF Code³OS-->
+
+	<!--TERMINAL OF Code³OS-->
+	<div id="ter" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Terminal</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/Terminal" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--TERMINALS OF Code³OS-->
+
+	<!--vanishchat FOR CHATGPTS OF Code³OS-->
+	<div id="vanishchat" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Vanish Chat</button>
+			</div>
+		</div>
+		<iframe src="https://vanishchat.netlify.app/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--vanishchat OF Code³OS-->
+
+	<!--stickynotes OF Code³OS-->
+	<div id="stickynotes" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>stickynotes</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/stickynotes" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--stickynotes OF Code³OS-->
+
+	<!--support OF Code³OS-->
+	<div id="support" class="resizable">
+		<div class="Window_Border">
+			<div style="margin: none; padding: none;" class="btn-group" role="group">
+				<!-- <button id="closebrowser" style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 5px 0px 0px 5px;;" type="button" class="btn btn-danger">X</button> -->
+				<button
+					style=" height: auto; font-size: small; padding: 5px 5px 5px 5px; margin: 0px; border-radius: 0px 10px 10px 0px;"
+					type="button" class="btn btn-light" disabled>Support</button>
+			</div>
+		</div>
+		<iframe src="https://redhulk.in/support-os/" class="Internal_Browser_Window"></iframe>
+	</div>
+	<!--support OF Code³OS-->
+
+	<script>
+		$(function () {
+			$('.resizable').draggable();
+			$('.resizable').resizable({
+				handles: "n,s,w,e"
+			});
+		});
+	</script>
+
+</body>
+
+<div class="col-6">
+	<div class="Watermark">
+		<img style="padding-right: 10px;" src="./IMAGES/boot.png" alt="" width="50" height="30"
+			class="d-inline-block align-text-top">
+		<p style="text-align: center; padding-right: 10px;"><strong><span style="color: red;">Code³</span></strong><span
+				style="color: rgb(0, 77, 0);"> OS</span></p>
+	</div>
+</div>
+
+<div class="col-6">
+	<div class="Code³OS_Taskbar">
+		<script>
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth() + 1;
+			var year = date.getFullYear();
+			document.write(" " + day + "/" + month + "/" + year);  
+		</script>
+		<div style=" padding-left: 10px; padding-right: 10px; margin: 0px; display: block; align-content: center; justify-content: end;"
+			id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+		<p>|</p> &nbsp
+		<a href="index.html"><img style="padding-right: 10px;" src="Icons/Shutdown.png" alt="" width="30" height="20"
+				class="d-inline-block align-text-top" data-toggle="tooltip" data-placement="top" title="Shutdown"></a>
+		<p>|</p> &nbsp
+		<p>&copy; a <a href="https://redhulk.in"><span style="color: red;">red</span><span
+					style="color:rgb(7, 255, 7)">hulk</span><span style="color: white;">.in</span></a> product</p>
+
+	</div>
+</div>
+
+<footer class="footer">
+	<p class="scrolling-text">Welcome Dear! Get ready to experience our fast, secure and cache-free lightweight OS. We are running upon donations, support us to manage our domain and hosting costs.</p>
+</footer>
+
+<!-- JAVASCRIPT FOR BROWSER -->
+<script>
+
+	function OCBROWSER() {
+		var BROWSER = document.getElementById("browser");
+
+		if (BROWSER.style.display === "none") {
+			BROWSER.style.display = "block"
+		}
+
+		else {
+			BROWSER.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR BROWSER -->
+
+<!-- JAVASCRIPT FOR CALCULATOR -->
+<script>
+
+	function OCCALC() {
+		var CE = document.getElementById("calcu");
+
+		if (CE.style.display === "none") {
+			CE.style.display = "block"
+		}
+
+		else {
+			CE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR CALCULATOR -->
+
+<!-- JAVASCRIPT FOR CODE EDITOR -->
+<script>
+
+	function OCCE() {
+		var CE = document.getElementById("codeeditor");
+
+		if (CE.style.display === "none") {
+			CE.style.display = "block"
+		}
+
+		else {
+			CE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR CODE EDITOR -->
+
+
+<!-- JAVASCRIPT FOR html -->
+<script>
+
+	function OChtml() {
+		var EX = document.getElementById("htmlwin");
+
+		if (EX.style.display === "none") {
+			EX.style.display = "block"
+		}
+
+		else {
+			EX.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR html -->
+
+<!-- JAVASCRIPT FOR GAME -->
+<script>
+
+	function OCGAME() {
+		var GE = document.getElementById("game");
+
+		if (GE.style.display === "none") {
+			GE.style.display = "block"
+		}
+
+		else {
+			GE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR GAME -->
+
+<!-- JAVASCRIPT FOR ChatGPT -->
+<script>
+
+	function OCCHATGPT() {
+		var GFG = document.getElementById("CHATGPT");
+
+		if (GFG.style.display === "none") {
+			GFG.style.display = "block"
+		}
+
+		else {
+			GFG.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR CHATGPT -->
+
+<!-- JAVASCRIPT FOR MUSIC -->
+<script>
+
+	function OCMUSIC() {
+		var MUS = document.getElementById("music");
+
+		if (MUS.style.display === "none") {
+			MUS.style.display = "block"
+		}
+
+		else {
+			MUS.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR MUSIC -->
+
+<!-- JAVASCRIPT FOR NOTEPAD -->
+<script>
+
+	function OCNOTEPAD() {
+		var NP = document.getElementById("notepad");
+
+		if (NP.style.display === "none") {
+			NP.style.display = "block"
+		}
+
+		else {
+			NP.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR NOTEPAD -->
+
+<!-- JAVASCRIPT FOR NOTEPAD -->
+<script>
+
+	function OCscicalc() {
+		var PP = document.getElementById("scicalc");
+
+		if (PP.style.display === "none") {
+			PP.style.display = "block"
+		}
+
+		else {
+			PP.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR NOTEPAD -->
+
+<!-- JAVASCRIPT FOR imageeditor -->
+<script>
+
+	function OCimageeditor() {
+		var PE = document.getElementById("imageeditor");
+
+		if (PE.style.display === "none") {
+			PE.style.display = "block"
+		}
+
+		else {
+			PE.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR imageeditor -->
+
+<!-- JAVASCRIPT FOR todo -->
+<script>
+
+	function OCtodo() {
+		var PTT = document.getElementById("todo");
+
+		if (PTT.style.display === "none") {
+			PTT.style.display = "block"
+		}
+
+		else {
+			PTT.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR todo -->
+
+<!-- JAVASCRIPT FOR TERMINAL -->
+<script>
+
+	function OCTER() {
+		var TR = document.getElementById("ter");
+
+		if (TR.style.display === "none") {
+			TR.style.display = "block"
+		}
+
+		else {
+			TR.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR TERMINAL -->
+
+<!-- JAVASCRIPT FOR vanishchat -->
+<script>
+
+	function OCvanishchat() {
+		var WKP = document.getElementById("vanishchat");
+
+		if (WKP.style.display === "none") {
+			WKP.style.display = "block"
+		}
+
+		else {
+			WKP.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR vanishchat -->
+
+<!-- JAVASCRIPT FOR stickynotes -->
+<script>
+
+	function OCstickynotes() {
+		var WA = document.getElementById("stickynotes");
+
+		if (WA.style.display === "none") {
+			WA.style.display = "block"
+		}
+
+		else {
+			WA.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR stickynotes -->
+
+<!-- JAVASCRIPT FOR support -->
+<script>
+
+	function OCsupport() {
+		var WD = document.getElementById("support");
+
+		if (WD.style.display === "none") {
+			WD.style.display = "block"
+		}
+
+		else {
+			WD.style.display = "none"
+		}
+	}
+</Script>
+<!-- JAVASCRIPT FOR support -->
+
+
+<!-- -------------------------------------------------------------------- -->
+
+
+
+<!-- JAVASCRIPT FOR TIME \/ -->
+<script>
+
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
+	function showTime() {
+		var date = new Date();
+		var h = date.getHours(); // 0 - 23
+		var m = date.getMinutes(); // 0 - 59
+		var s = date.getSeconds(); // 0 - 59
+		var session = "AM";
+
+		if (h == 0) {
+			h = 12;
+		}
+
+		if (h > 12) {
+			h = h - 12;
+			session = "PM";
+		}
+
+		h = (h < 10) ? "0" + h : h;
+		m = (m < 10) ? "0" + m : m;
+		s = (s < 10) ? "0" + s : s;
+
+		var time = h + ":" + m + ":" + s + " " + session;
+		document.getElementById("MyClockDisplay").innerText = time;
+		document.getElementById("MyClockDisplay").textContent = time;
+
+		setTimeout(showTime, 1000);
+
+	}
+
+	showTime();
+
+</script>
+
+</html>
